@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Astronautech — DJ para festivais e eventos. Sets de música eletrónica synthwave e retrowave ao vivo. Som do cosmos na pista de dança.">
+  <meta name="theme-color" content="#0a0014">
+  <title>Astronautech | DJ · Festivais & Eventos</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Mr+Dafoe&family=Sacramento&family=Exo+2:ital,wght@0,300;0,400;0,600;1,300&family=Orbitron:wght@400;600;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="icon" href="assets/logo.svg" type="image/svg+xml">
+</head>
+<body>
+  <canvas id="dark-matter" aria-hidden="true"></canvas>
+  <div class="stars" aria-hidden="true"></div>
+
+  <div class="synthwave-scene" aria-hidden="true">
+    <svg class="mountains" viewBox="0 0 1200 400" preserveAspectRatio="none">
+      <defs>
+        <linearGradient id="wireGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="0%" stop-color="#ff007f"/>
+          <stop offset="50%" stop-color="#ff1493"/>
+          <stop offset="100%" stop-color="#ff00cc"/>
+        </linearGradient>
+      </defs>
+      <polygon points="0,400 120,280 240,340 360,220 480,300 600,180 720,260 840,200 960,280 1080,240 1200,320 1200,400" fill="none" stroke="url(#wireGrad)" stroke-width="1.5" opacity="0.7"/>
+      <polyline points="120,280 240,340 360,220" fill="none" stroke="url(#wireGrad)" stroke-width="1" opacity="0.5"/>
+      <polyline points="480,300 600,180 720,260" fill="none" stroke="url(#wireGrad)" stroke-width="1" opacity="0.5"/>
+      <polyline points="840,200 960,280 1080,240" fill="none" stroke="url(#wireGrad)" stroke-width="1" opacity="0.5"/>
+    </svg>
+    <div class="grid-floor"></div>
+  </div>
+
+  <header class="header">
+    <nav class="nav">
+      <a href="#inicio" class="nav-logo">
+        <img src="assets/logo.svg" alt="Astronautech" class="nav-logo-img" width="44" height="44">
+        <span class="nav-logo-text">astronautech</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="#sobre">Sobre</a></li>
+        <li><a href="#eventos">Eventos</a></li>
+        <li><a href="#plataformas">Sets</a></li>
+        <li><a href="#contacto">Bookings</a></li>
+      </ul>
+      <a href="https://www.instagram.com/astronautechmusic/" target="_blank" rel="noopener noreferrer" class="nav-instagram" aria-label="Instagram Astronautech">
+        <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+      </a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="inicio" class="hero">
+      <div class="hero-logo-wrap">
+        <img
+          src="assets/logo.svg"
+          alt="Astronautech — logo synthwave com diamante, grid neon e montanhas wireframe"
+          class="brand-logo"
+          width="420"
+          height="420"
+        >
+      </div>
+
+      <p class="slogan">Som do cosmos. Ritmo do infinito.</p>
+      <p class="hero-sub">DJ · Festivais · Eventos · Synthwave & Retrowave ao vivo</p>
+      <p class="hero-tagline">Sets que transformam palcos em órbitas — da pista de dança ao universo.</p>
+
+      <div class="hero-cta">
+        <a href="#eventos" class="btn btn-primary">Próximos Eventos</a>
+        <a href="#contacto" class="btn btn-outline">Reservar DJ</a>
+        <a href="https://www.instagram.com/astronautechmusic/" target="_blank" rel="noopener noreferrer" class="btn btn-outline">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+          @astronautechmusic
+        </a>
+      </div>
+    </section>
+
+    <section id="sobre" class="about">
+      <div class="section-inner">
+        <h2 class="section-title"><span class="title-accent">//</span> Sobre</h2>
+        <div class="about-grid">
+          <div class="about-visual">
+            <img src="assets/logo.svg" alt="Logo oficial Astronautech" class="about-logo" loading="lazy">
+            <div class="about-glow"></div>
+          </div>
+          <div class="about-text">
+            <p><strong>Astronautech</strong> é o projecto de DJ dedicado a festivais e eventos — onde a energia da pista encontra a estética synthwave e a atmosfera do cosmos.</p>
+            <p>Cada set é uma viagem sonora pensada para palcos, tendas e dance floors: builds intensos, drops cósmicos e uma estética retro-futurista que preenche o espaço entre o público e as estrelas.</p>
+            <ul class="about-highlights">
+              <li>Festivais de música eletrónica</li>
+              <li>Eventos privados & club nights</li>
+              <li>Sets ao vivo · Synthwave · Retrowave · House</li>
+            </ul>
+            <p class="about-handle">
+              <svg class="headphones-icon" viewBox="0 0 64 64" width="28" height="28" aria-hidden="true">
+                <defs>
+                  <linearGradient id="hpGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#00d4ff"/>
+                    <stop offset="50%" stop-color="#a855f7"/>
+                    <stop offset="100%" stop-color="#ff00ff"/>
+                  </linearGradient>
+                </defs>
+                <path d="M16 32a16 16 0 0 1 32 0v8a6 6 0 0 1-6 6h-2v-14a10 10 0 0 0-20 0v14h-2a6 6 0 0 1-6-6v-8z" fill="url(#hpGrad)"/>
+                <rect x="10" y="32" width="8" height="14" rx="4" fill="url(#hpGrad)"/>
+                <rect x="46" y="32" width="8" height="14" rx="4" fill="url(#hpGrad)"/>
+              </svg>
+              @astronautech
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="eventos" class="events">
+      <div class="section-inner">
+        <h2 class="section-title"><span class="title-accent">//</span> Festivais & Eventos</h2>
+        <p class="section-desc">Astronautech leva a energia do cosmos aos palcos — festivais, club nights e eventos especiais.</p>
+
+        <div class="events-grid">
+          <article class="event-card event-card--featured">
+            <span class="event-badge">Ao vivo</span>
+            <h3 class="event-name">Sets de Festival</h3>
+            <p class="event-desc">Performances pensadas para grandes palcos e multidões — synthwave, retrowave e eletrónica com impacto visual e sonoro.</p>
+          </article>
+
+          <article class="event-card">
+            <span class="event-badge">Club</span>
+            <h3 class="event-name">Club Nights</h3>
+            <p class="event-desc">Noites intensas com transições fluidas, drops marcantes e uma atmosfera neon que domina a pista.</p>
+          </article>
+
+          <article class="event-card">
+            <span class="event-badge">Private</span>
+            <h3 class="event-name">Eventos Privados</h3>
+            <p class="event-desc">Casamentos, festas corporativas e celebrações com sets personalizados ao teu evento.</p>
+          </article>
+        </div>
+
+        <p class="events-note">
+          Próximas datas e anúncios em tempo real —
+          <a href="https://www.instagram.com/astronautechmusic/" target="_blank" rel="noopener noreferrer">segue @astronautechmusic</a>
+        </p>
+      </div>
+    </section>
+
+    <section id="plataformas" class="platforms">
+      <div class="section-inner">
+        <h2 class="section-title"><span class="title-accent">//</span> Sets & Gravações</h2>
+        <p class="section-desc">Revive os momentos dos palcos. Ouve sets e gravações de Astronautech nas plataformas digitais.</p>
+
+        <div class="platform-grid">
+          <a href="https://open.spotify.com/search/astronautech" target="_blank" rel="noopener noreferrer" class="platform-card" data-platform="spotify">
+            <div class="platform-icon spotify">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/></svg>
+            </div>
+            <span class="platform-name">Spotify</span>
+            <span class="platform-action">Ouvir →</span>
+          </a>
+
+          <a href="https://bandcamp.com/search?q=astronautech" target="_blank" rel="noopener noreferrer" class="platform-card" data-platform="bandcamp">
+            <div class="platform-icon bandcamp">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M0 18.75l7.437-7.437L0 3.875V0h24v3.875l-7.438 7.438L24 18.75V24H0v-5.25z"/></svg>
+            </div>
+            <span class="platform-name">Bandcamp</span>
+            <span class="platform-action">Ouvir →</span>
+          </a>
+
+          <a href="https://www.youtube.com/results?search_query=astronautech+music" target="_blank" rel="noopener noreferrer" class="platform-card" data-platform="youtube">
+            <div class="platform-icon youtube">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+            </div>
+            <span class="platform-name">YouTube</span>
+            <span class="platform-action">Ouvir →</span>
+          </a>
+
+          <a href="https://soundcloud.com/search?q=astronautech" target="_blank" rel="noopener noreferrer" class="platform-card" data-platform="soundcloud">
+            <div class="platform-icon soundcloud">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M1.175 13.5c-.645 0-1.175.53-1.175 1.175v2.65c0 .645.53 1.175 1.175 1.175S2.35 17.97 2.35 17.325v-2.65c0-.645-.53-1.175-1.175-1.175zm2.842 1.075c-.645 0-1.175.53-1.175 1.175v1.575c0 .645.53 1.175 1.175 1.175s1.175-.53 1.175-1.175v-1.575c0-.645-.53-1.175-1.175-1.175zm2.842-.65c-.645 0-1.175.53-1.175 1.175v2.225c0 .645.53 1.175 1.175 1.175s1.175-.53 1.175-1.175v-2.225c0-.645-.53-1.175-1.175-1.175zm2.842-1.3c-.645 0-1.175.53-1.175 1.175v3.525c0 .645.53 1.175 1.175 1.175s1.175-.53 1.175-1.175v-3.525c0-.645-.53-1.175-1.175-1.175zm2.842-1.95c-.645 0-1.175.53-1.175 1.175v4.875c0 .645.53 1.175 1.175 1.175s1.175-.53 1.175-1.175v-4.875c0-.645-.53-1.175-1.175-1.175zm2.842-2.6c-.645 0-1.175.53-1.175 1.175v6.525c0 .645.53 1.175 1.175 1.175s1.175-.53 1.175-1.175v-6.525c0-.645-.53-1.175-1.175-1.175zm2.842-1.3c-.645 0-1.175.53-1.175 1.175v7.825c0 .645.53 1.175 1.175 1.175s1.175-.53 1.175-1.175v-7.825c0-.645-.53-1.175-1.175-1.175zm3.017 0c-.645 0-1.175.53-1.175 1.175v7.825c0 .645.53 1.175 1.175 1.175h.65c3.45 0 6.25-2.8 6.25-6.25S19.95 7.25 16.5 7.25h-.65z"/></svg>
+            </div>
+            <span class="platform-name">SoundCloud</span>
+            <span class="platform-action">Ouvir →</span>
+          </a>
+
+          <a href="https://www.deezer.com/search/astronautech" target="_blank" rel="noopener noreferrer" class="platform-card" data-platform="deezer">
+            <div class="platform-icon deezer">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.81 4.16v3.03h3.03V4.16h-3.03zM18.81 9.22v3.03h3.03V9.22h-3.03zM18.81 14.28v3.03h3.03v-3.03h-3.03zM13.75 4.16v3.03h3.03V4.16h-3.03zM13.75 9.22v3.03h3.03V9.22h-3.03zM13.75 14.28v3.03h3.03v-3.03h-3.03zM8.69 4.16v3.03h3.03V4.16H8.69zM8.69 9.22v3.03h3.03V9.22H8.69zM8.69 14.28v3.03h3.03v-3.03H8.69zM3.63 9.22v3.03h3.03V9.22H3.63zM3.63 14.28v3.03h3.03v-3.03H3.63z"/></svg>
+            </div>
+            <span class="platform-name">Deezer</span>
+            <span class="platform-action">Ouvir →</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section id="contacto" class="contact">
+      <div class="section-inner contact-inner">
+        <h2 class="section-title"><span class="title-accent">//</span> Bookings & Contacto</h2>
+        <p class="section-desc">Queres Astronautech no teu festival ou evento? Envia mensagem pelo Instagram para reservas e parcerias.</p>
+        <a href="https://www.instagram.com/astronautechmusic/" target="_blank" rel="noopener noreferrer" class="instagram-banner">
+          <div class="instagram-banner-glow"></div>
+          <div class="instagram-banner-content">
+            <svg viewBox="0 0 24 24" width="48" height="48" fill="currentColor" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+            <div>
+              <span class="instagram-handle">@astronautechmusic</span>
+              <span class="instagram-label">Bookings · Eventos · Festivais</span>
+            </div>
+          </div>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p class="footer-logo">
+      <img src="assets/logo.svg" alt="" class="footer-logo-img" width="64" height="64" aria-hidden="true">
+      astronautech
+    </p>
+    <p class="footer-slogan">Som do cosmos. Ritmo do infinito.</p>
+    <p class="footer-copy">&copy; 2026 Astronautech · DJ para Festivais & Eventos</p>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
