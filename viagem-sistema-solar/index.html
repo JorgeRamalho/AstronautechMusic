@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Viagem Sistema Solar — Explore o Sol, a Lua e todos os planetas com fichas de dados e desafios interactivos.">
+  <meta name="theme-color" content="#0a0014">
+  <title>Viagem Sistema Solar | Astronautech</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,300;0,400;0,600;0,700;1,400&family=Orbitron:wght@400;600;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/game.css">
+  <link rel="icon" href="../assets/logo.svg" type="image/svg+xml">
+</head>
+<body>
+  <canvas id="starfield" aria-hidden="true"></canvas>
+
+  <div class="game-app" id="game-app">
+    <!-- Ecrã inicial -->
+    <section class="screen screen--active" id="screen-intro" data-screen="intro">
+      <div class="intro-content">
+        <p class="intro-badge">Astronautech Presents</p>
+        <h1 class="game-title">Viagem<br><span>Sistema Solar</span></h1>
+        <p class="intro-desc">Embarca numa expedição pelo cosmos. Descobre o Sol, a Lua e os oito planetas — com fichas de dados e desafios em cada parada.</p>
+        <div class="intro-actions">
+          <button type="button" class="btn btn-primary" id="btn-start">Iniciar Viagem</button>
+          <a href="../index.html" class="btn btn-outline">Voltar ao site</a>
+        </div>
+        <label class="voice-toggle">
+          <input type="checkbox" id="voice-enabled" checked>
+          <span>Narrador com voz</span>
+        </label>
+      </div>
+      <div class="ship-preview" aria-hidden="true">🚀</div>
+    </section>
+
+    <!-- Mapa da viagem -->
+    <section class="screen" id="screen-map" data-screen="map">
+      <header class="game-header">
+        <div class="header-left">
+          <h2>Mapa da Viagem</h2>
+          <p class="header-sub">Selecciona a próxima parada desbloqueada</p>
+        </div>
+        <div class="header-stats">
+          <span class="stat" id="stat-stops">0 / 10 paradas</span>
+          <span class="stat stat--score" id="stat-score">⭐ 0 pts</span>
+        </div>
+      </header>
+
+      <div class="map-container">
+        <div class="solar-orbit" id="solar-map" role="list" aria-label="Paradas da viagem"></div>
+      </div>
+
+      <div class="map-ship" id="map-ship" aria-hidden="true">🚀</div>
+    </section>
+
+    <!-- Parada activa -->
+    <section class="screen" id="screen-stop" data-screen="stop">
+      <header class="stop-header">
+        <button type="button" class="btn-icon" id="btn-back-map" aria-label="Voltar ao mapa">← Mapa</button>
+        <div class="stop-title-wrap">
+          <span class="stop-emoji" id="stop-emoji"></span>
+          <div>
+            <h2 id="stop-name"></h2>
+            <p id="stop-type" class="stop-type"></p>
+          </div>
+        </div>
+        <div class="stop-progress">
+          <span id="stop-step-label">Introdução</span>
+        </div>
+      </header>
+
+      <div class="stop-body">
+        <aside class="narrator-panel" aria-live="polite">
+          <div class="narrator-avatar" aria-hidden="true">
+            <span>🛰️</span>
+            <p>Comandante Nova</p>
+          </div>
+          <div class="narrator-bubble">
+            <p id="narrator-text">A preparar transmissão...</p>
+            <div class="narrator-controls">
+              <button type="button" class="btn-small" id="btn-narrator-skip">Saltar texto</button>
+              <button type="button" class="btn-small" id="btn-narrator-repeat">Repetir</button>
+            </div>
+          </div>
+        </aside>
+
+        <main class="stop-content" id="stop-content">
+          <!-- Conteúdo dinâmico: viagem, ficha, actividade -->
+        </main>
+      </div>
+
+      <footer class="stop-footer">
+        <button type="button" class="btn btn-outline" id="btn-stop-prev" hidden>Anterior</button>
+        <button type="button" class="btn btn-primary" id="btn-stop-next">Continuar</button>
+      </footer>
+    </section>
+
+    <!-- Conclusão -->
+    <section class="screen" id="screen-complete" data-screen="complete">
+      <div class="complete-content">
+        <p class="complete-badge">Missão Concluída</p>
+        <h2>Parabéns, Explorador!</h2>
+        <p>Completaste a viagem por todo o Sistema Solar. Dominaste o Sol, a Lua e os oito planetas.</p>
+        <p class="complete-score" id="final-score">Pontuação final: 0</p>
+        <div class="intro-actions">
+          <button type="button" class="btn btn-primary" id="btn-restart">Nova Viagem</button>
+          <a href="../index.html" class="btn btn-outline">Voltar ao site</a>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <script src="js/data.js"></script>
+  <script src="js/narrator.js"></script>
+  <script src="js/activities.js"></script>
+  <script src="js/game.js"></script>
+  <script src="js/starfield.js"></script>
+</body>
+</html>
